@@ -158,4 +158,15 @@ $total = Collection::make($users)
     ->filter(fn($k) => $k->age >= 30)
     ->sum('salary');
 
+
+$avg = Collection::make($users)->avg("age");
+
+
+$count = Collection::make($users)->count();
+
+
 print_r($total);
+echo "\n";
+print_r($avg);
+echo "\n";
+print_r($count);
